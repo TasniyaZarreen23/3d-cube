@@ -1,0 +1,110 @@
+<html>
+<head>
+<title>3D cube</title>
+<style>
+body{
+    background-color:bisque;
+}
+.cube {
+width: 300px;
+height: 300px;
+position: relative;
+top: 120px; right: -100px;
+transform-style: preserve-3d;
+animation: rotate 5s infinite linear;
+box-shadow: 3px 3px rgb(0, 26, 255), -1em 0 .4em oliv;
+text-align: center;
+text-shadow: 1px 1px 2px red, 0 0 1em rgb(0, 255, 145), 0 0 0.2em blue;
+font-size: xx-large;
+}
+
+.cube1 {
+width: 300px;
+height: 300px;
+position: relative;
+top: -200px; left: 400px;
+transform-style: preserve-3d;
+animation: rotate 5s infinite linear;
+text-align: center;
+text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em rgb(255, 0, 136);
+font-size:xx-large;
+}
+
+.face {
+position: absolute;
+width: 200px;
+height: 200px;
+border: 2px solid blue;
+opacity: 0.8;
+box-shadow: 10px 5px 5px rgb(84, 6, 193);
+}
+
+.front {
+background-color: red;
+transform: translateZ(100px);
+color: aliceblue;
+box-shadow: 10px 5px 5px red;
+
+
+}
+
+.back {
+background-color: blue;
+transform: rotateX(180deg) translateZ(100px);
+box-shadow: 10px 5px 5px blue;
+}
+
+.top {
+background-color: green;
+transform: rotateX(90deg) translateZ(100px);
+box-shadow: 10px 5px 5px green;
+}
+
+.bottom {
+background-color: rgb(207, 122, 198);
+transform: rotateX(-90deg) translateZ(100px);
+box-shadow: 10px 5px 5px  rgb(207, 122, 198);
+
+}
+
+.left {
+background-color:aqua;
+transform: rotateY(-90deg) translateZ(100px);
+box-shadow: 10px 5px 5px aqua;
+}
+
+.right {
+background-color: rgb(0, 100, 128);
+transform: rotateY(90deg) translateZ(100px);
+box-shadow: 10px 5px 5px  rgb(0, 100, 128);
+}
+
+@keyframes rotate {
+0% { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+100% { transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg); }
+}
+</style>
+</head>
+<body>
+<div class="cube">
+    <div class="face front">ONE</div>
+    <div class="face back">TWO</div>
+    <div class="face top">THREE</div>
+    <div class="face bottom">FOUR</div>
+    <div class="face left">FIVE</div>
+    <div class="face right">SIX</div>
+</div>
+
+<div class="cube1">
+    <div class="face front">ONE</div>
+    <div class="face back">TWO</div>
+    <div class="face top">THREE</div>
+    <div class="face bottom">FOUR</div>
+    <div class="face left">FIVE</div>
+    <div class="face right">SIX</div>
+</div>
+
+
+
+</body>
+</html>
